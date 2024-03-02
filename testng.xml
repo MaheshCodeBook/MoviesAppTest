@@ -1,6 +1,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="MovieAppTestSuite" parallel="classes" thread-count="2">
+    <listeners>
+        <listener class-name="MoviesAppTestReports"/>
+    </listeners>
     <test name="MovieAppTest">
         <classes>
             <class name="LoginPageTest"/>
