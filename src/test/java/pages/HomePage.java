@@ -16,6 +16,10 @@ public class HomePage {
     WebDriverWait wait;
     public List<WebElement> navBarEleList;
 
+
+    @FindBy(xpath = "//a[text()='Home']")
+    WebElement homePageTextEle;
+
     @FindBy(xpath = "//h1[text()='Trending Now']")
     WebElement buttomSectionHeadingEle1;
 
@@ -24,9 +28,6 @@ public class HomePage {
 
     @FindBy(className = "home-movie-play-button")
     WebElement playButtonDisplayedEle;
-
-
-
 
     @FindBy(css = "svg[class *='icon-element google-']")
     WebElement googleIconDisplayedEle;
@@ -66,6 +67,10 @@ public class HomePage {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         PageFactory.initElements(driver,this);
+    }
+
+    public String homePageText(){
+        return homePageTextEle.getText();
     }
 
     public String buttomSectionHeading1(){

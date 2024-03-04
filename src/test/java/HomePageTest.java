@@ -17,6 +17,7 @@ public class HomePageTest extends  BaseTest{
     //Test the heading texts of each section
     @Test(priority = 1)
     public void testHeadingsOfEachSection(){
+        Assert.assertEquals(homePage.homePageText(),"Home","Home text doesn't match");
         Assert.assertEquals(homePage.buttomSectionHeading1(),"Trending Now","buttom section heading1 doesn't match");
         Assert.assertEquals(homePage.buttomSectionHeading2(),"Originals","buttom section heading2 doesn't match");
 
@@ -30,14 +31,15 @@ public class HomePageTest extends  BaseTest{
     // Test the Contact Us Section
     @Test(priority = 3)
     public void testContactUsSection(){
+        // Test the ContactUs Text is displayed or not
+        Assert.assertEquals(homePage.contactUsText(),"Contact Us","contact us text doesn't match");
+
         // Test the ContactUs Icons are displayed or not
         Assert.assertTrue(homePage.googleIconDisplayed().isDisplayed(),"Google icon is not displayed");
         Assert.assertTrue(homePage.twitterIconDisplayed().isDisplayed(),"Twitter icon is not displayed");
         Assert.assertTrue(homePage.instagramIconDisplayed().isDisplayed(),"Instagram icon is not displayed");
         Assert.assertTrue(homePage.youtubeIconDisplayed().isDisplayed(),"Youtube icon is not displayed");
 
-        // Test the ContactUs Text is displayed or not
-        Assert.assertEquals(homePage.contactUsText(),"Contact Us","contact us text doesn't match");
-
     }
+
 }
