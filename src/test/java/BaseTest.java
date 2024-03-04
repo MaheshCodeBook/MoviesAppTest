@@ -19,7 +19,9 @@ public class BaseTest {
 
     @BeforeMethod
     public void setUp(){
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\user\\Downloads\\chromedriver-win32\\chromedriver.exe");
+       // System.setProperty("webdriver.chrome.driver", "C:\\Users\\user\\Downloads\\chromedriver-win32\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\user\\Downloads\\chromediver122\\chromedriver-win32\\\\chromedriver.exe");
+
         driver = new ChromeDriver();
        // driver.manage().window().maximize();
         loginPage = new LoginPage(driver);
