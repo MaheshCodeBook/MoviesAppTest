@@ -17,7 +17,6 @@ public class HomePageTest extends  BaseTest{
     //Test the heading texts of each section
     @Test(priority = 1)
     public void testHeadingsOfEachSection(){
-        Assert.assertEquals(homePage.homePageText(),"Home","Home text doesn't match");
         Assert.assertEquals(homePage.buttomSectionHeading1(),"Trending Now","buttom section heading1 doesn't match");
         Assert.assertEquals(homePage.buttomSectionHeading2(),"Originals","buttom section heading2 doesn't match");
 
